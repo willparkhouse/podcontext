@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "PodContext",
+  "version": "1.0",
+  "description": "Download Spotify podcast transcripts for LLM context",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://open.spotify.com/*",
+    "https://spclient.wg.spotify.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://open.spotify.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+#spotify-transcript-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  background-color: #1db954;
+  color: #000;
+  border: none;
+  border-radius: 500px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#spotify-transcript-dl-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.04);
+}
+
+#spotify-transcript-dl-btn:active {
+  transform: scale(0.96);
+}
+
+#spotify-transcript-dl-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#spotify-transcript-dl-btn svg {
+  width: 16px;
+  height: 16px;
+}
