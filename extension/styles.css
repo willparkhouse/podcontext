@@ -1,3 +1,4 @@
+/* Spotify Button */
 #podcontext-btn {
   display: inline-flex;
   align-items: center;
@@ -31,6 +32,43 @@
 }
 
 #podcontext-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* YouTube Button */
+#podcontext-yt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", "Arial", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#podcontext-yt-btn:hover {
+  background-color: #ff0000;
+  transform: scale(1.02);
+}
+
+#podcontext-yt-btn:active {
+  transform: scale(0.98);
+}
+
+#podcontext-yt-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#podcontext-yt-btn svg {
   width: 16px;
   height: 16px;
 }
