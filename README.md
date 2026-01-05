@@ -18,16 +18,15 @@ A Chrome extension that adds a one-click download button to Spotify podcast epis
 2. Navigate to any podcast episode with a transcript
 3. Interact with the page first (e.g., click play/pause) to allow the extension to capture auth tokens
 4. Click the green **Download Transcript** button
-5. The transcript downloads as a `.txt` file with speaker labels
+5. A dialog appears letting you rename the speakers (e.g., "Speaker 1" → "Rory Stewart")
+6. Click **Download** and the transcript saves as a `.txt` file
 
 ## Output Format
 
-The downloaded transcript is formatted with speaker labels for easy reading:
-
 ```
-Speaker 1: Welcome to the show. Today we're discussing...
+Rory Stewart: Welcome to the show. Today we're discussing...
 
-Speaker 2: Thanks for having me. I think the key point is...
+Matt Clifford: Thanks for having me. I think the key point is...
 ```
 
 ## Troubleshooting
@@ -40,13 +39,7 @@ Speaker 2: Thanks for having me. I think the key point is...
 
 ## How It Works
 
-The extension intercepts Spotify's authentication tokens from network requests, then uses them to fetch transcripts from Spotify's internal API. Transcripts are parsed and formatted into readable text with speaker labels.
-
-## Limitations
-
-- Only works with episodes that have Spotify-generated transcripts
-- Speaker labels are generic ("Speaker 1", "Speaker 2") as Spotify doesn't identify speakers by name
-- Requires brief interaction with the page before first download to capture auth tokens
+The extension intercepts Spotify's authentication tokens from network requests, then uses them to fetch transcripts from Spotify's internal API. Before downloading, you can rename the generic speaker labels to actual names.
 
 ## License
 
